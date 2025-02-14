@@ -1,0 +1,165 @@
+body {
+  text-align: center;
+  background: linear-gradient(300deg, #ff6086, #ffcdd2, #ffdade);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  font-family: "Open Sans";
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@font-face {
+  font-family: "Love Live Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Love Live Regular"), url("LoveLive-nAxlP.woff") format("woff");
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+/* section 1 */
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  margin-left: 8rem;
+}
+#title {
+  font-family: "Love Live Regular", cursive;
+  font-weight: normal;
+  font-size: 13rem;
+  margin: 1%;
+  color: #ef3e5c;
+}
+.layout {
+  display: flex;
+  gap: 2rem;
+}
+#buttonplay {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-top: 2.5rem;
+}
+/* section 2 */
+#level-title {
+  font-family: "Love Live Regular", cursive;
+  font-weight: normal;
+  font-size: 6rem;
+  margin: 5rem 2%;
+  color: #ef3e5c;
+}
+
+.container_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 20px;
+  margin: 25px;
+}
+.row {
+  display: flex;
+}
+.picture {
+  margin-top: 15rem;
+}
+
+.copyright {
+  font-family: "Open Sans";
+  font-weight: normal;
+  color: #bc0245;
+  text-align: center;
+}
+
+/* section 3 */
+#end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#title_end {
+  font-family: "Love Live Regular", cursive;
+  font-weight: normal;
+  font-size: 8rem;
+  margin: 3rem;
+  color: #ef3e5c;
+}
+#end p {
+  color: #743629;
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 53rem;
+  text-align: center;
+}
+
+/* CSS cho carousel */
+.carousel {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem;
+}
+
+.carousel-container {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.carousel-item {
+  width: 33.33%;
+  height: 600px;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-33.33%);
+  }
+  66% {
+    transform: translateX(-66.66%);
+  }
+}
+
+/* Animation  */
+.game-over {
+  background-color: #e53935;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 0 20px #ef3e5c;
+}
+
+.test {
+  background-color: pink;
+}
+
+.flash {
+  background-color: white;
+  transition: background-color 0.2s;
+}
