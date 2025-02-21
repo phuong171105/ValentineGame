@@ -6,7 +6,6 @@ var randomNumber;
 var gameStarted = false;
 var level = 0;
 
-// check đK tương tác vs trình duyệt (nhấn phím để start game)
 $("#buttonplay").on("click", function () {
   if (!gameStarted) {
     $("#level-title").text("Level " + level);
@@ -19,7 +18,7 @@ $("#buttonplay").on("click", function () {
 
 // create new color random
 function nextSequence() {
-  if (level === 15) {
+  if (level === 100) {
     winGame();
     return;
   }
@@ -85,7 +84,6 @@ function checkAnswer(currentlevel) {
 }
 
 //Win game
-
 var winSounds = ["win1.mp3", "win2.mp3", "win3.mp3", "win4.mp3", "win5.mp3"];
 
 function winGame() {
